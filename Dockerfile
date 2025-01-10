@@ -1,4 +1,6 @@
 FROM webdevops/php-nginx:7.4
+EXPOSE 80
+EXPOSE 9000
 COPY . /app
 WORKDIR /app
 RUN [ "sh", "-c", "composer install --ignore-platform-reqs" ]
